@@ -73,3 +73,4 @@ crashlytics-build.properties
 MLBoxing/Library/PackageCache/com.unity.burst@1.8.7/.Runtime/libburst-llvm-15.dylib
 MLBoxing/venv/Lib/site-packages/torch/lib/dnnl.lib
 MLBoxing/venv/Lib/site-packages/torch/lib/torch.dll
+MLBoxing/venv/Lib/site-packages/torch/lib/torch_cpu.dll
