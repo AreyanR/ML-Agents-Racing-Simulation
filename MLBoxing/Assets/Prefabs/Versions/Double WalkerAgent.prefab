@@ -351,7 +351,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5095952, y: 0.6659805, z: 1.2621635}
+  m_LocalScale: {x: 1.5095952, y: 0.4968892, z: 0.7683002}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7148413584287059010}
@@ -551,7 +551,7 @@ Transform:
   m_GameObject: {fileID: 453773768670326735}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.41250005, y: 0, z: 0.021}
+  m_LocalPosition: {x: -0.41250005, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -958,7 +958,7 @@ Transform:
   m_GameObject: {fileID: 976846711752696614}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.41250005, y: 0, z: 0.021}
+  m_LocalPosition: {x: -0.41250005, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1808,7 +1808,7 @@ Transform:
   m_GameObject: {fileID: 1572421005957462378}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.41250005, y: 0, z: 0.021}
+  m_LocalPosition: {x: 0.41250005, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4758,7 +4758,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: b000e8fcd1edc454d9e6deb84abefbf9, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 532a5b6f14912d741a9a0b6e45b53810, type: 3}
   m_InferenceDevice: 2
   m_BehaviorType: 0
   m_BehaviorName: Walker
@@ -8289,7 +8289,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: b000e8fcd1edc454d9e6deb84abefbf9, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 532a5b6f14912d741a9a0b6e45b53810, type: 3}
   m_InferenceDevice: 2
   m_BehaviorType: 0
   m_BehaviorName: Walker
@@ -10391,7 +10391,7 @@ Transform:
   m_GameObject: {fileID: 7385481103997947982}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.41250005, y: 0, z: 0.021}
+  m_LocalPosition: {x: 0.41250005, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12534,7 +12534,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5095952, y: 0.6659805, z: 1.2621635}
+  m_LocalScale: {x: 1.5095952, y: 0.4968892, z: 0.7683002}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1166946543356282674}
