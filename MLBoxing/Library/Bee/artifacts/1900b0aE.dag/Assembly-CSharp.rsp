@@ -109,7 +109,6 @@
 -define:ENABLE_UNITY_COLLECTIONS_CHECKS
 -define:ENABLE_BURST_AOT
 -define:UNITY_TEAM_LICENSE
--define:UNITY_PRO_LICENSE
 -define:ENABLE_CUSTOM_RENDER_TEXTURE
 -define:ENABLE_DIRECTOR
 -define:ENABLE_LOCALIZATION
@@ -385,6 +384,8 @@
 "Assets/Scripts/GroundContact.cs"
 "Assets/Scripts/JointDriveController.cs"
 "Assets/Scripts/OrientationCubeController.cs"
+"Assets/Scripts/Runner1Agent.cs"
+"Assets/Scripts/Runner2Agent.cs"
 "Assets/Scripts/TargetController.cs"
 "Assets/Scripts/WalkerAgent.cs"
 -langversion:9.0

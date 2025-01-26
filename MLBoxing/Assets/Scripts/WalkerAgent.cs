@@ -49,7 +49,6 @@ public class WalkerAgent : Agent
     public Transform armR;
     public Transform forearmR;
     public Transform handR;
-    [Header("Other Agent")] public WalkerAgent opponentAgent;
 
     //This will be used as a stabilized model space reference point for observations
     //Because ragdolls can move erratically during training, using a stabilized reference transform improves learning
@@ -59,8 +58,6 @@ public class WalkerAgent : Agent
     DirectionIndicator m_DirectionIndicator;
     JointDriveController m_JdController;
     EnvironmentParameters m_ResetParams;
-
-    
 
     public override void Initialize()
     {
@@ -140,40 +137,25 @@ public class WalkerAgent : Agent
     {
         var cubeForward = m_OrientationCube.transform.forward;
 
-        // Velocity we want to match
+        //velocity we want to match
         var velGoal = cubeForward * MTargetWalkingSpeed;
-        // Ragdoll's average velocity
+        //ragdoll's avg vel
         var avgVel = GetAvgVelocity();
 
-        // Current ragdoll velocity (normalized)
-        sensor.AddObservation(Vector3.Distance(velGoal, avgVel)); // Distance to velocity goal
-        sensor.AddObservation(m_OrientationCube.transform.InverseTransformDirection(avgVel)); // Average body velocity
-        sensor.AddObservation(m_OrientationCube.transform.InverseTransformDirection(velGoal)); // Velocity goal
+        //current ragdoll velocity. normalized
+        sensor.AddObservation(Vector3.Distance(velGoal, avgVel));
+        //avg body vel relative to cube
+        sensor.AddObservation(m_OrientationCube.transform.InverseTransformDirection(avgVel));
+        //vel goal relative to cube
+        sensor.AddObservation(m_OrientationCube.transform.InverseTransformDirection(velGoal));
 
-        // Rotation deltas
+        //rotation deltas
         sensor.AddObservation(Quaternion.FromToRotation(hips.forward, cubeForward));
         sensor.AddObservation(Quaternion.FromToRotation(head.forward, cubeForward));
 
-        // Remove the static target observation
-        // sensor.AddObservation(m_OrientationCube.transform.InverseTransformPoint(target.transform.position));
+        //Position of target position relative to cube
+        sensor.AddObservation(m_OrientationCube.transform.InverseTransformPoint(target.transform.position));
 
-        // New Observations: Opponent Position and Distance
-        if (opponentAgent != null) // Ensure the opponent is assigned
-        {
-            // Relative position of the opponent from the agent's orientation cube
-            Vector3 opponentRelativePosition = m_OrientationCube.transform.InverseTransformPoint(opponentAgent.transform.position);
-            sensor.AddObservation(opponentRelativePosition);
-
-            // Distance to the opponent
-            float distanceToOpponent = Vector3.Distance(transform.position, opponentAgent.transform.position);
-            sensor.AddObservation(distanceToOpponent);
-
-            // Opponent's velocity (if needed)
-            Vector3 opponentVelocity = m_OrientationCube.transform.InverseTransformDirection(opponentAgent.GetAvgVelocity());
-            sensor.AddObservation(opponentVelocity);
-        }
-
-        // Observation of each body part
         foreach (var bodyPart in m_JdController.bodyPartsList)
         {
             CollectObservationBodyPart(bodyPart, sensor);
@@ -222,69 +204,54 @@ public class WalkerAgent : Agent
     //Update OrientationCube and DirectionIndicator
     void UpdateOrientationObjects()
     {
-    // Instead of using the static target, use the opponent's position
-    m_WorldDirToWalk = opponentAgent.transform.position - hips.position;
-    m_OrientationCube.UpdateOrientation(hips, opponentAgent.transform); // Orient towards the opponent
-    if (m_DirectionIndicator)
-    {
-        m_DirectionIndicator.MatchOrientation(m_OrientationCube.transform);
-    }
+        m_WorldDirToWalk = target.position - hips.position;
+        m_OrientationCube.UpdateOrientation(hips, target);
+        if (m_DirectionIndicator)
+        {
+            m_DirectionIndicator.MatchOrientation(m_OrientationCube.transform);
+        }
     }
 
     void FixedUpdate()
     {
-        // Update orientation based on opponent's position
         UpdateOrientationObjects();
 
         var cubeForward = m_OrientationCube.transform.forward;
 
-        // 1. Calculate direction towards the opponent
-        Vector3 directionToOpponent = (opponentAgent.transform.position - hips.position).normalized;
-        directionToOpponent.y = 0; // Ignore height difference for horizontal movement
+        // Set reward for this step according to mixture of the following elements.
+        // a. Match target speed
+        //This reward will approach 1 if it matches perfectly and approach zero as it deviates
+        var matchSpeedReward = GetMatchingVelocityReward(cubeForward * MTargetWalkingSpeed, GetAvgVelocity());
 
-        // 2. Calculate movement speed and direction
-        float moveSpeed = MTargetWalkingSpeed; // Use the target walking speed
-        Vector3 desiredVelocity = directionToOpponent * moveSpeed;
-
-        // 3. Calculate the current velocity of the agent
-        Vector3 currentVelocity = GetAvgVelocity();
-
-        // 4. Calculate the reward for matching speed towards the opponent
-        var matchSpeedReward = GetMatchingVelocityReward(desiredVelocity, currentVelocity);
-
-        // 5. Check for NaNs to avoid errors
+        //Check for NaNs
         if (float.IsNaN(matchSpeedReward))
         {
             throw new ArgumentException(
-                "NaN in matchSpeedReward.\n" +
-                $" directionToOpponent: {directionToOpponent}\n" +
+                "NaN in moveTowardsTargetReward.\n" +
+                $" cubeForward: {cubeForward}\n" +
                 $" hips.velocity: {m_JdController.bodyPartsDict[hips].rb.velocity}\n" +
                 $" maximumWalkingSpeed: {m_maxWalkingSpeed}"
             );
         }
 
-        // 6. Calculate the alignment reward based on facing the opponent
+        // b. Rotation alignment with target direction.
+        //This reward will approach 1 if it faces the target direction perfectly and approach zero as it deviates
         var headForward = head.forward;
-        headForward.y = 0; // Ensure only horizontal alignment
-        var lookAtOpponentReward = (Vector3.Dot(headForward, directionToOpponent) + 1) * .5F;
+        headForward.y = 0;
+        // var lookAtTargetReward = (Vector3.Dot(cubeForward, head.forward) + 1) * .5F;
+        var lookAtTargetReward = (Vector3.Dot(cubeForward, headForward) + 1) * .5F;
 
-        if (float.IsNaN(lookAtOpponentReward))
+        //Check for NaNs
+        if (float.IsNaN(lookAtTargetReward))
         {
             throw new ArgumentException(
-                "NaN in lookAtOpponentReward.\n" +
-                $" directionToOpponent: {directionToOpponent}\n" +
+                "NaN in lookAtTargetReward.\n" +
+                $" cubeForward: {cubeForward}\n" +
                 $" head.forward: {head.forward}"
             );
         }
 
-        // 7. Add rewards for moving towards the opponent and facing the right direction
-        AddReward(matchSpeedReward * lookAtOpponentReward);
-
-        // 8. Optional: Penalize for moving away from the opponent
-        if (Vector3.Distance(transform.position, opponentAgent.transform.position) > 5.0f) // Arbitrary distance threshold
-        {
-            AddReward(-0.1f); // Penalty for being too far away
-        }
+        AddReward(matchSpeedReward * lookAtTargetReward);
     }
 
     //Returns the average velocity of all of the body parts

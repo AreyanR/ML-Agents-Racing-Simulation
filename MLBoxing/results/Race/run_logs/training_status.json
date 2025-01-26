@@ -1,0 +1,123 @@
+{
+    "Runner2": {
+        "checkpoints": [
+            {
+                "steps": 6999958,
+                "file_path": "results\\Race\\Runner2\\Runner2-6999958.onnx",
+                "reward": 67.3884927764852,
+                "creation_time": 1728290944.9004571,
+                "auxillary_file_paths": [
+                    "results\\Race\\Runner2\\Runner2-6999958.pt"
+                ]
+            },
+            {
+                "steps": 7499977,
+                "file_path": "results\\Race\\Runner2\\Runner2-7499977.onnx",
+                "reward": 71.18952330350876,
+                "creation_time": 1728291985.790439,
+                "auxillary_file_paths": [
+                    "results\\Race\\Runner2\\Runner2-7499977.pt"
+                ]
+            },
+            {
+                "steps": 7999975,
+                "file_path": "results\\Race\\Runner2\\Runner2-7999975.onnx",
+                "reward": 81.36197128554561,
+                "creation_time": 1728293026.8044205,
+                "auxillary_file_paths": [
+                    "results\\Race\\Runner2\\Runner2-7999975.pt"
+                ]
+            },
+            {
+                "steps": 8499988,
+                "file_path": "results\\Race\\Runner2\\Runner2-8499988.onnx",
+                "reward": 79.76750204894277,
+                "creation_time": 1728294005.2013323,
+                "auxillary_file_paths": [
+                    "results\\Race\\Runner2\\Runner2-8499988.pt"
+                ]
+            },
+            {
+                "steps": 8791051,
+                "file_path": "results\\Race\\Runner2\\Runner2-8791051.onnx",
+                "reward": 79.66145464516227,
+                "creation_time": 1728294519.8701515,
+                "auxillary_file_paths": [
+                    "results\\Race\\Runner2\\Runner2-8791051.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 8791051,
+            "file_path": "results\\Race\\Runner2.onnx",
+            "reward": 79.66145464516227,
+            "creation_time": 1728294519.8701515,
+            "auxillary_file_paths": [
+                "results\\Race\\Runner2\\Runner2-8791051.pt"
+            ]
+        }
+    },
+    "Runner1": {
+        "checkpoints": [
+            {
+                "steps": 6999999,
+                "file_path": "results\\Race\\Runner1\\Runner1-6999999.onnx",
+                "reward": 67.02732164630679,
+                "creation_time": 1728290944.4654644,
+                "auxillary_file_paths": [
+                    "results\\Race\\Runner1\\Runner1-6999999.pt"
+                ]
+            },
+            {
+                "steps": 7499961,
+                "file_path": "results\\Race\\Runner1\\Runner1-7499961.onnx",
+                "reward": 68.42263355515819,
+                "creation_time": 1728291985.1590297,
+                "auxillary_file_paths": [
+                    "results\\Race\\Runner1\\Runner1-7499961.pt"
+                ]
+            },
+            {
+                "steps": 7999991,
+                "file_path": "results\\Race\\Runner1\\Runner1-7999991.onnx",
+                "reward": 71.23523306562787,
+                "creation_time": 1728293026.2221153,
+                "auxillary_file_paths": [
+                    "results\\Race\\Runner1\\Runner1-7999991.pt"
+                ]
+            },
+            {
+                "steps": 8499947,
+                "file_path": "results\\Race\\Runner1\\Runner1-8499947.onnx",
+                "reward": 74.90749772150247,
+                "creation_time": 1728294004.847188,
+                "auxillary_file_paths": [
+                    "results\\Race\\Runner1\\Runner1-8499947.pt"
+                ]
+            },
+            {
+                "steps": 8791312,
+                "file_path": "results\\Race\\Runner1\\Runner1-8791312.onnx",
+                "reward": 76.96693687013823,
+                "creation_time": 1728294519.9202468,
+                "auxillary_file_paths": [
+                    "results\\Race\\Runner1\\Runner1-8791312.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 8791312,
+            "file_path": "results\\Race\\Runner1.onnx",
+            "reward": 76.96693687013823,
+            "creation_time": 1728294519.9202468,
+            "auxillary_file_paths": [
+                "results\\Race\\Runner1\\Runner1-8791312.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.4.1+cpu"
+    }
+}
