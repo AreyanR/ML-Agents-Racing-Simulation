@@ -20,7 +20,7 @@ Agents refine their behaviors through rewards and penalties, adapting to changin
   The competitive dynamic between the agents encourages diverse strategies and interactions, enhancing their adaptability.
 
 ## About the Project
-The goal was to demonstrate how AI agents can adapt and learn within a controlled, competitive environment. By introducing a second agent, the project created a competitive dynamic that significantly enhanced the training process, enabling faster learning and more diverse strategies.
+The goal was to demonstrate how AI agents can adapt and learn within a controlled, competitive environment. By introducing a second agent, the project created a competitive dynamic that significantly enhanced the training process, enabling faster learning and more diverse strategies. 
 
 This project highlights my skills in Unity development, machine learning, and behavior modeling. While not a game, it serves as a technical demonstration of AI-driven behavior in a foot race scenario. Unity was selected for its powerful tools  and visualization capabilities.
 
@@ -56,7 +56,8 @@ This project highlights my skills in Unity development, machine learning, and be
 - **Behavior Optimization**:  
   Agents learned to navigate more efficiently with each training iteration, adapting to the environment and refining their strategies.
 - **Team Training Advantage**:  
-  Initially, the project only had one agent. Adding a second agent introduced competition, which accelerated the training process by encouraging both agents to learn faster and adopt diverse strategies.
+  Initially, the project had only one agent, which took about 7 hours to learn how to walk and reach the goal line. However, adding a second agent introduced competition, significantly accelerating the training process and reducing the time to around 3 hours. This competitive dynamic encouraged faster learning and the development of more diverse strategies.
+  
 
 ## Media
 [Trained Agents Demo](https://drive.google.com/file/d/1fzPdLlhJZcMVbY1OmpAedB2_hmkmz6jU/view?usp=sharing)  
