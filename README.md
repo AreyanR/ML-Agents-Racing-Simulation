@@ -63,7 +63,7 @@ This project highlights my skills in Unity development, machine learning, and be
   Initially, the project only had one agent. Adding a second agent introduced competition, which accelerated the training process by encouraging both agents to learn faster and adopt diverse strategies.
 
 ## Media
-[Watch the Video Demo](https://drive.google.com/file/d/1IS2D83aCRbxlteJGPERPACedNlcXyw2W/view?usp=sharing)  
+[Agent Training Demo](https://drive.google.com/file/d/1IS2D83aCRbxlteJGPERPACedNlcXyw2W/view?usp=sharing)  
 *See the agents balance, walk, and compete in real-time as they race toward the finish line.*
 
 ## Tools and Technologies
