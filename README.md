@@ -40,6 +40,7 @@ This project highlights my skills in Unity development, machine learning, and be
   Reach the finish line faster than the other agent.
 - **Rewards**:
   - Staying balanced.
+  - Reaching the finish line first.
   - Successfully completing the race.
 - **Penalties**:
   - Falling or losing the race.
@@ -52,7 +53,7 @@ This project highlights my skills in Unity development, machine learning, and be
   - Reaching the finish line first.
   - Successfully completing the race.
 - **Penalties**:
-  - Falling or failing to complete the race.
+  - Falling or losing the race.
 
 ## Discoveries During Simulation
 - **Behavior Optimization**:  
