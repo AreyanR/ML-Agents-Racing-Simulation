@@ -6,10 +6,7 @@ This project is a machine learning simulation built in Unity, showcasing the beh
 ## Key Features
 
 ### Reinforcement Learning
-- **Adaptive Learning**:  
-  Agents refine their strategies through iterative training, receiving rewards for desired actions and penalties for errors.
-- **Dynamic Adaptation**:  
-  Agents adjust their behaviors based on evolving conditions and environmental changes.
+Agents refine their behaviors through rewards and penalties, adapting to changing conditions over time.
 
 ### Agent Behaviors
 - **Goal-Oriented Actions**:  
