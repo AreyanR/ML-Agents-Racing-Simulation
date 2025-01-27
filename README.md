@@ -37,7 +37,7 @@ This project highlights my skills in Unity development, machine learning, and be
 
 ### Reinforcement Learning Parameters
 
-#### Agent 1 (Runner 1)
+#### Agent 1 (Blue Runner)
 - **Objective**:  
   Reach the finish line faster than the other agent.
 - **Rewards**:
@@ -46,9 +46,9 @@ This project highlights my skills in Unity development, machine learning, and be
 - **Penalties**:
   - Falling or losing the race.
 
-#### Agent 2 (Runner 2)
+#### Agent 2 (Red Runner)
 - **Objective**:  
-  Compete with Runner 1 to reach the finish line.
+  Compete with Agent 1 to reach the finish line.
 - **Rewards**:
   - Staying balanced.
   - Reaching the finish line first.
