@@ -20,9 +20,9 @@ Agents refine their behaviors through rewards and penalties, adapting to changin
   The competitive dynamic between the agents encourages diverse strategies and interactions, enhancing their adaptability.
 
 ## About the Project
-This project explores the potential of reinforcement learning in Unity, using the **Unity ML-Agents Toolkit** to create a dynamic simulation. The goal was to demonstrate how AI agents can adapt and learn within a controlled, competitive environment. By introducing a second agent, the project created a competitive dynamic that significantly enhanced the training process, enabling faster learning and more diverse strategies.
+The goal was to demonstrate how AI agents can adapt and learn within a controlled, competitive environment. By introducing a second agent, the project created a competitive dynamic that significantly enhanced the training process, enabling faster learning and more diverse strategies.
 
-This project highlights my skills in Unity development, machine learning, and behavior modeling. While not a game, it serves as a technical demonstration of AI-driven behavior in a racing scenario. Unity was selected for its powerful tools  and visualization capabilities.
+This project highlights my skills in Unity development, machine learning, and behavior modeling. While not a game, it serves as a technical demonstration of AI-driven behavior in a foot race scenario. Unity was selected for its powerful tools  and visualization capabilities.
 
 ## Learning Process and Parameters
 
