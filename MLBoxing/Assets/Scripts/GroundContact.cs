@@ -1,5 +1,6 @@
 using UnityEngine;
 using Unity.MLAgents;
+using UnityEngine.SceneManagement;
 //
 namespace Unity.MLAgentsExamples
 {
@@ -18,10 +19,12 @@ namespace Unity.MLAgentsExamples
         public float groundContactPenalty; // Penalty amount (ex: -1).
         public bool touchingGround;
         const string k_Ground = "ground"; // Tag of ground object.
+        const string k_Target = "target"; // Tag of target object.
 
         /// <summary>
         /// Check for collision with ground, and optionally penalize agent.
         /// </summary>
+        /// 
         void OnCollisionEnter(Collision col)
         {
             if (col.transform.CompareTag(k_Ground))
@@ -37,8 +40,18 @@ namespace Unity.MLAgentsExamples
                     agent.EndEpisode();
                 }
             }
-        }
+    }
 
+/*
+     private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("target")) // Tag for the AI agent
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
+        }
+    }
+        
+*/
         /// <summary>
         /// Check for end of ground collision and reset flag appropriately.
         /// </summary>

@@ -185,7 +185,7 @@ public class Runner1Agent : Agent
             {
                 AddReward(1.0f); // Reward for reaching the target first
                 raceFinished = true; // Mark the race as finished
-                runner2.AddReward(-1.0f); // Penalize the other agent
+                runner2.AddReward(-1.0f); //in whic Penalize the other agent
             }
 
             // End the episode for both agents
