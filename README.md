@@ -17,7 +17,7 @@ Agents refine their behaviors through rewards and penalties, adapting to changin
   2. **Walk**: Move forward steadily with improved stability.
   3. **Run**: Reach maximum speed while maintaining control and balance.
 - **Behavioral Diversity**:  
-  The competitive dynamic between the agents encourages diverse strategies and interactions, enhancing their adaptability.
+  The competitive dynamic between the agents accelerates learning and enhances their adaptability, encouraging the development of diverse strategies.
 
 ## About the Project
 The goal was to demonstrate how AI agents can adapt and learn within a controlled, competitive environment. By introducing a second agent, the project created a competitive dynamic that significantly enhanced the training process, enabling faster learning and more diverse strategies. 
@@ -40,17 +40,19 @@ This project highlights my skills in Unity development, machine learning, and be
   - Reaching the finish line first.
   - Successfully completing the race.
 - **Penalties**:
-  - Falling or losing the race.
+  - Falling.
+  - Losing the race.
 
 #### Agent 2 (Red)
 - **Objective**:  
-  Compete with Agent 1 to reach the finish line.
+  Reach the finish line faster than the other agent.
 - **Rewards**:
   - Staying balanced.
   - Reaching the finish line first.
   - Successfully completing the race.
 - **Penalties**:
-  - Falling or losing the race.
+  - Falling.
+  - Losing the race.
 
 ## Discoveries During Simulation
 - **Behavior Optimization**:  
