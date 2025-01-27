@@ -16,9 +16,9 @@ This project is a machine learning simulation built in Unity, showcasing the beh
   Agents compete to reach the finish line, optimizing paths and minimizing penalties as they train.
 - **Behavioral Progression**:  
   Agents learn progressively:
-  1. **Balance**: Maintaining stability while moving.
-  2. **Walk**: Efficient forward movement.
-  3. **Run**: Reaching maximum speed toward the goal.
+  1. **Balance**: Maintain stability while standing.
+  2. **Walk**: Move forward steadily with improved stability.
+  3. **Run**: Reach maximum speed while maintaining control and balance.
 - **Behavioral Diversity**:  
   The competitive dynamic between the agents encourages diverse strategies and interactions, enhancing their adaptability.
 
