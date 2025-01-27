@@ -30,10 +30,8 @@ This project highlights my skills in Unity development, machine learning, and be
 ## Learning Process and Parameters
 
 ### Rewards and Penalties
-- **Efficiency and Accuracy**:  
-  Agents are rewarded for completing the race efficiently.
-- **Error Handling**:  
-  Penalties discourage unwanted actions such as falling or losing the race.
+- Agents are rewarded for completing the race efficiently.
+- Penalties discourage unwanted actions such as falling or losing the race.
 
 ### Reinforcement Learning Parameters
 
