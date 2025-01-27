@@ -64,7 +64,6 @@ This project highlights my skills in Unity development, machine learning, and be
 
 ## Media
 [Agent Training Demo](https://drive.google.com/file/d/1IS2D83aCRbxlteJGPERPACedNlcXyw2W/view?usp=sharing)  
-*See the agents balance, walk, and compete in real-time as they race toward the finish line.*
 
 ## Tools and Technologies
 - **Unity**: Game engine for developing the simulation environment.
