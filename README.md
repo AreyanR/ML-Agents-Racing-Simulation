@@ -59,7 +59,7 @@ This project highlights my skills in Unity development, machine learning, and be
   Initially, the project only had one agent. Adding a second agent introduced competition, which accelerated the training process by encouraging both agents to learn faster and adopt diverse strategies.
 
 ## Media
-[ML Agents Training Demo](https://drive.google.com/file/d/1fzPdLlhJZcMVbY1OmpAedB2_hmkmz6jU/view?usp=sharing)  
+[Trained Agents Demo](https://drive.google.com/file/d/1fzPdLlhJZcMVbY1OmpAedB2_hmkmz6jU/view?usp=sharing)  
 
 ## Tools and Technologies
 - **Unity**: Game engine for developing the simulation environment.
