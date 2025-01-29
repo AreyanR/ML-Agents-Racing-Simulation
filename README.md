@@ -61,8 +61,10 @@ This project highlights my skills in Unity development, machine learning, and be
   Initially, the project had only one agent, which took about 7 hours to learn how to walk and reach the goal line. However, adding a second agent introduced competition, significantly accelerating the training process and reducing the time to around 3 hours. This competitive dynamic encouraged faster learning and the development of more diverse strategies.
   
 
-## Media
-[Trained Agents Demo](https://drive.google.com/file/d/1fzPdLlhJZcMVbY1OmpAedB2_hmkmz6jU/view?usp=sharing)  
+## Preview
+| [Training POV 1](https://drive.google.com/file/d/1ytgTfkr9oeHJOWrWxUajdIw4DZm0zGzi/view?usp=sharing) | [Training POV 2](https://drive.google.com/file/d/1nq0k0ig2wAu55ZIt4jmtw2oMuJP8DcJB/view?usp=sharing) |
+|:---:|:---:|
+| ![Training POV 1](images/demo1.gif) | ![Training POV 2](images/demo2.gif) |
 
 ## Tools and Technologies
 - **Unity**: Game engine for developing the simulation environment.
